@@ -21,7 +21,6 @@ import MyOrders from './pages/MyOrders';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import UserReviews from './pages/UserReviews';
-import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute component
 
 function App() {
   return (
@@ -31,10 +30,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* Protected Routes */}
-          <Route path="/browse" element={<PrivateRoute element={<Browse />} />} />
-          <Route path="/buy" element={<PrivateRoute element={<Buy />} />} />
-          <Route path="/rent" element={<PrivateRoute element={<Rent />} />} />
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/buy" element={<Buy />} />
+          <Route path="/rent" element={<Rent />} />
           <Route path="/camera/:id" element={<CameraDetails />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/wishlist" element={<WishlistPage />} />
@@ -43,7 +41,7 @@ function App() {
           <Route path="/myorders" element={<MyOrders />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/ure" element={<UserReviews />} />
+           <Route path="/ure" element={<UserReviews/>} />
         </Routes>
         <ToastContainer position="top-center" autoClose={1000} />
       </BrowserRouter>
