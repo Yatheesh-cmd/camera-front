@@ -5,6 +5,7 @@ import { sampleCamerasApi } from '../services/api';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CameraCard from '../components/CameraCard';
+import './Home.css'
 
 function Home() {
   const [sampleCameras, setSampleCameras] = useState([]);
